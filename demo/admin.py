@@ -1,23 +1,16 @@
 from django.contrib import admin
-from django.contrib.admin import AdminSite
 from django.contrib import messages
-from django.contrib.auth.models import User, Group
-from django.contrib.auth.admin import UserAdmin, GroupAdmin
 
+from . import models
 
-class CustomAdminSite(AdminSite):
-    def index(self, request, extra_context=None):
+@admin.register(models.TestPerson)
+class TestPersonAdmin(admin.ModelAdmin):
+    def changelist_view(self, request, extra_context=None):
         messages.success(request, "This is a success message")
         messages.warning(request, "This is a warning message")
-
         messages.info(request, "This is an info message", extra_tags="info")
-
         messages.error(request, "This is an error message")
-        return super().index(request, extra_context)
+        return super().changelist_view(request, extra_context)
 
-
-custom_admin_site = CustomAdminSite(name="custom_admin")
-
-# Register User and Group models with the custom admin site
-custom_admin_site.register(User, UserAdmin)
-custom_admin_site.register(Group, GroupAdmin)
+    list_display = ("name", "age")
+    search_fields = ("name", "age")
