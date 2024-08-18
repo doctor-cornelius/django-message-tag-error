@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     "admin_interface",
     "colorfield",
     "django.contrib.admin",
-    "safedelete",
 ]
 
 MIDDLEWARE = [
