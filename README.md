@@ -2,7 +2,7 @@
 
 ## TLDR;
 
-If you override message tags in `settings.py`, it is difficult to know how to do it. Furthermore if you plan on generating `info` or `debug` message tags for the admin panel, they will not work because django admin does  not include styling for them. This repo shows how to achieve this, for vailla admin, and also if using `django-admin-interface`.
+If you override message tags in `settings.py`, it is difficult to know how to do it. Furthermore if you plan on generating `info` or `debug` message tags for the admin panel, they will not work because django admin does  not include styling for them. This repo shows how to achieve this, for vanilla admin, and also if using `django-admin-interface`.
 
 ## The Problem
 
