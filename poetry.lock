@@ -75,6 +75,32 @@ files = [
 Pillow = ">=9.0.0"
 
 [[package]]
+name = "django-safedelete"
+version = "1.4.0"
+description = "Mask your objects instead of deleting them from your database."
+optional = false
+python-versions = "*"
+files = [
+    {file = "django_safedelete-1.4.0-py3-none-any.whl", hash = "sha256:f722845088c00398711fad8961f044cf18badfecaf541bcc616102f46339adda"},
+    {file = "django_safedelete-1.4.0.tar.gz", hash = "sha256:ce63f2dd101fec303837ef624592628e022691c3ade2a0893c9fc4c7796e8288"},
+]
+
+[package.dependencies]
+Django = "*"
+packaging = "*"
+
+[[package]]
+name = "packaging"
+version = "24.1"
+description = "Core utilities for Python packages"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"},
+    {file = "packaging-24.1.tar.gz", hash = "sha256:026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"},
+]
+
+[[package]]
 name = "pillow"
 version = "10.4.0"
 description = "Python Imaging Library (Fork)"
@@ -228,4 +254,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "2bf5c2848c64bc8da052656b9a21086a3518b473128aab62d3c484a59b84a6db"
+content-hash = "18cab62b7a6e289dacf5815abab6440244619dd19ae3158e133d2ddfd36f3c5c"

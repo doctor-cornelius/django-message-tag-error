@@ -10,6 +10,7 @@ python = "^3.12"
 django = "^5.1"
 django-admin-interface = "^0.28.8"
 django-apptemplates = "^1.5"
+django-safedelete = "^1.4.0"
 
 
 [build-system]
