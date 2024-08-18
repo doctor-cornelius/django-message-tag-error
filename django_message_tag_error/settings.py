@@ -33,8 +33,9 @@ ALLOWED_HOSTS = []
 # from django.contrib import messages
 from django.contrib.messages import constants as messages
 
+MESSAGE_LEVEL = messages.DEBUG
 MESSAGE_TAGS = {
-    messages.DEBUG: "warning alert-info",
+    messages.DEBUG: "debug alert-info",
     messages.INFO: "info alert-info",
     messages.SUCCESS: "success alert-success",
     messages.WARNING: "warning alert-warning",
@@ -42,7 +43,11 @@ MESSAGE_TAGS = {
 }
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [
+    # BASE_DIR / "django_message_tag_error/static",
+    BASE_DIR / "demo/static",
+]
 
 
 # Application definition

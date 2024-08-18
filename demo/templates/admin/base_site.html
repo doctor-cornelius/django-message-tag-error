@@ -1,5 +1,7 @@
 {% extends "admin_interface:admin/base_site.html" %}
 
+{% load static %}
+
 {% block title %}HELLO THERE{% endblock %}
 
 {% block branding %}
@@ -10,25 +12,31 @@
 <style>
     html[data-theme="light"],
     :root {
+        --message-debug-bg: #f116ede1;
+        /* Blue background for info messages */
+        --message-debug-text: #100f0f;
+        /* White text for better contrast */
         --message-info-bg: #cfcfd769;
         /* Blue background for info messages */
         --message-info-text: #100f0f;
         /* White text for better contrast */
     }
 
-    .messagelist .info {
-        background-color: var(--message-info-bg);
+    .messagelist .debug {
+        background-color: var(--message-debug-bg);
         color: var(--message-info-text);
-    }
-
-    .ul.messagelist li.info {
-        background: var(--message-info-bg) url(../img/icon-no.svg) 40px 12px no-repeat;
+        background: var(--message-debug-bg) url({% static 'admin/img/icon-unknown.svg' %}) 40px 12px no-repeat;
         background-size: 16px auto;
     }
 
-    .messagelist li.custom-info {
-        background-color: #17a2b8;
-        color: #ffffff;
+    .messagelist .info {
+        background-color: var(--message-info-bg);
+        color: var(--message-info-text);
+        background: var(--message-info-bg) url({% static 'admin/img/icons8-info.svg' %}) 40px 12px no-repeat;
+        background-size: 16px auto;
     }
+
+</style>
+
 </style>
 {% endblock %}
